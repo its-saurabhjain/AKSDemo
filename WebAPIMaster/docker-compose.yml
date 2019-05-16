@@ -1,0 +1,30 @@
+version: '3.4'
+networks:
+  dockerapi-dev:
+    driver: bridge
+
+services:
+  webapimaster:
+    image: webapimaster:latest
+    depends_on:
+      - "webapibackend"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    environment:
+      BACKEND_URL: http://webapibackend
+    networks:
+      - dockerapi-dev
+  webapibackend:
+    image: webapibackend:latest
+    build:
+      context: ../WebAPIBackEnd
+      dockerfile: Dockerfile
+    expose:
+      - "80"
+    ports:
+      - "4000:80"
+    networks:
+      - dockerapi-dev

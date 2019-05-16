@@ -1,0 +1,142 @@
+﻿<style>
+    .visuallyhidden {
+        display: none;
+    }
+
+    .wizard-progress {
+        list-style: none;
+        list-style-image: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        float: left;
+        white-space: nowrap;
+    }
+
+        .wizard-progress li {
+            float: left;
+            margin-right: 50px;
+            text-align: center;
+            position: relative;
+            width: 100px;
+        }
+
+        .wizard-progress .step-name {
+            display: table-cell;
+            height: 32px;
+            vertical-align: bottom;
+            text-align: center;
+            width: 100px;
+        }
+
+        .wizard-progress .step-name-wrapper {
+            display: table-cell;
+            height: 100%;
+            vertical-align: bottom;
+        }
+
+        .wizard-progress .step-num {
+            font-size: 14px;
+            font-weight: bold;
+            border: 3px solid #000;
+            border-radius: 50%;
+            width: 18px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+            .wizard-progress .step-num:after {
+                content: "";
+                display: block;
+                background: #000;
+                height: 5px;
+                width: 130px;
+                position: absolute;
+                bottom: 10px;
+                left: 60px;
+            }
+
+        .wizard-progress li:last-of-type .step-num:after {
+            display: none;
+        }
+
+        .wizard-progress .active-step .step-num {
+            background-color: greenyellow;
+        }
+</style>
+
+<h3>Place the order for mobile, by clicking on the 'Place Order' Button</h3>
+<div>
+    <ol class="wizard-progress clearfix">
+        <li id="OrderPlaced">
+            <span class="step-name">
+                Order Placed
+            </span>
+            <span class="visuallyhidden">Step </span><span class="step-num">1</span>
+        </li>
+        <li id="OrderApproved">
+            <span class="step-name">Order Approved</span>
+            <span class="visuallyhidden">Step </span><span class="step-num">2</span>
+        </li>
+        <li id="OrderShipped">
+            <span class="step-name">Order Shipped</span>
+            <span class="visuallyhidden">Step </span><span class="step-num">3</span>
+        </li>
+        <li id="ItemsDelivered">
+            <span class="step-name">Items Delivered</span>
+            <span class="visuallyhidden">Step </span><span class="step-num">4</span>
+        </li>
+    </ol>
+</div>
+<br /><br /><br />
+<br /><br /><br />
+<div>
+    <input id="Place_Order" type="button" value="Place Order" style="cursor: pointer" />
+</div>
+<br /><br /><br />
+<h3>Order Status :</h3><br />
+<div id="ordermessage"></div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    $("#ordermessage").text("NIL");
+    $("#Place_Order").click(function () {
+        $.ajax({
+            url: '@Url.Action("ProcessOrder", "Home")',
+            type: "GET",
+            dataType: "json"
+        });
+        poll();
+    });
+
+    function poll() {
+        $.ajax({
+            url: '@Url.Action("GetResponse", "Home")',
+            type: "GET",
+            success: function (data) {
+                if (data === "OrderPlaced") {
+                    $("li").removeClass("active-step");
+                    $("#OrderPlaced").addClass("active-step");
+                    $("#ordermessage").text("Order has been placed for mobile");
+                }
+                else if (data === "OrderApproved") {
+                    $("li").removeClass("active-step");
+                    $("#OrderApproved").addClass("active-step");
+                    $("#ordermessage").text("Order Approved");
+                }
+                else if (data === "OrderShipped") {
+                    $("li").removeClass("active-step");
+                    $("#OrderShipped").addClass("active-step");
+                    $("#ordermessage").text("Order Shipped");
+                }
+                else if (data === "ItemsDelivered") {
+                    $("li").removeClass("active-step");
+                    $("#ItemsDelivered").addClass("active-step");
+                    $("#ordermessage").text("Items Delivered");
+                }
+            },
+            dataType: "json",
+            complete: setTimeout(function (data) { poll() }, 5000),
+            timeout: 2000
+        });
+    };
+</script>

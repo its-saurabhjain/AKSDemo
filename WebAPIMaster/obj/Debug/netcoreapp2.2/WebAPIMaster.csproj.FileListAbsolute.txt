@@ -1,0 +1,14 @@
+C:\AKS\WebAPIMaster\bin\Debug\netcoreapp2.2\WebAPIMaster.deps.json
+C:\AKS\WebAPIMaster\bin\Debug\netcoreapp2.2\WebAPIMaster.runtimeconfig.json
+C:\AKS\WebAPIMaster\bin\Debug\netcoreapp2.2\WebAPIMaster.runtimeconfig.dev.json
+C:\AKS\WebAPIMaster\bin\Debug\netcoreapp2.2\WebAPIMaster.dll
+C:\AKS\WebAPIMaster\bin\Debug\netcoreapp2.2\WebAPIMaster.pdb
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.csprojAssemblyReference.cache
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.csproj.CoreCompileInputs.cache
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.RazorAssemblyInfo.cache
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.RazorAssemblyInfo.cs
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.AssemblyInfoInputs.cache
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.AssemblyInfo.cs
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.RazorTargetAssemblyInfo.cache
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.dll
+C:\AKS\WebAPIMaster\obj\Debug\netcoreapp2.2\WebAPIMaster.pdb

@@ -1,0 +1,55 @@
+﻿version: '2'
+services:
+   MobileCart:
+    image: mobilecart/dockerdemo
+    container_name: "mobilecart"
+    ports:
+     - "8080:80"
+    volumes:
+     - C:\DockerLogs\MobileCart:/app/Logs
+
+   CustomerRestAPI:
+    image: customerserviceapi/dockerdemo
+    container_name: "customerrestapi"
+    ports:
+     - "13402:80"
+    volumes:
+     - C:\DockerLogs\MobileCart:/app/Logs
+
+   InventoryRestAPI:
+    image: inventoryserviceapi/dockerdemo
+    container_name: "inventoryrestapi"
+    ports:
+     - "13477:80"
+    volumes:
+     - C:\DockerLogs\InventoryService:/app/Logs
+
+   NotificationRestAPI:
+    image: notificationserviceapi/dockerdemo
+    container_name: "notificationrestapi"
+    ports:
+     - "14062:80"
+    volumes:
+     - C:\DockerLogs\NotificationService:/app/Logs
+
+   OrderApprovalRestAPI:
+    image: orderapprovalserviceapi/dockerdemo
+    container_name: "orderapprovalrestapi"
+    ports:
+     - "14581:80"
+    volumes:
+     - C:\DockerLogs\OrderApprovalService:/app/Logs
+
+   ShippingRestAPI:
+    image: shippingserviceapi/dockerdemo
+    container_name: "shippingrestapi"
+    ports:
+     - "14414:80"
+    volumes:
+     - C:\DockerLogs\ShippingService:/app/Logs
+
+   mongodb:
+    image: mongo:latest
+    container_name: "mongodb"
+    ports:
+     - "27017:27017"

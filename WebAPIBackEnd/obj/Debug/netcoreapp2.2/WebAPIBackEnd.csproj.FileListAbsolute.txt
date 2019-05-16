@@ -1,0 +1,14 @@
+C:\AKS\WebAPIBackEnd\bin\Debug\netcoreapp2.2\WebAPIBackEnd.deps.json
+C:\AKS\WebAPIBackEnd\bin\Debug\netcoreapp2.2\WebAPIBackEnd.runtimeconfig.json
+C:\AKS\WebAPIBackEnd\bin\Debug\netcoreapp2.2\WebAPIBackEnd.runtimeconfig.dev.json
+C:\AKS\WebAPIBackEnd\bin\Debug\netcoreapp2.2\WebAPIBackEnd.dll
+C:\AKS\WebAPIBackEnd\bin\Debug\netcoreapp2.2\WebAPIBackEnd.pdb
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.csprojAssemblyReference.cache
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.csproj.CoreCompileInputs.cache
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.RazorAssemblyInfo.cache
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.RazorAssemblyInfo.cs
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.AssemblyInfoInputs.cache
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.AssemblyInfo.cs
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.RazorTargetAssemblyInfo.cache
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.dll
+C:\AKS\WebAPIBackEnd\obj\Debug\netcoreapp2.2\WebAPIBackEnd.pdb
